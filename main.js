@@ -99,12 +99,32 @@ function createCard(actors) {
 
     return cardWrapper;
 }
+
 const cardsList = document.getElementById('cards-list');
-const HTMLCards = actors
-    .filter((actors) => actors.firstName && actors.lastName && actors.profilePicture && actors.contacts)
-    .map((actors) => createCard(actors));
+const HTMLCards = actors.map((actor) => createCard(actor));
 
 cardsList.append(...HTMLCards);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//старий
+//const cardsList = document.getElementById('cards-list');
+// const HTMLCards = actors
+//     .filter((actors) => actors.firstName && actors.lastName && actors.profilePicture && actors.contacts)
+//     .map((actors) => createCard(actors));
+
+// cardsList.append(...HTMLCards);
 
 
 

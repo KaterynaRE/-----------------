@@ -11,7 +11,12 @@ function createImage(actors) {
         cardPhoto.remove();
         const textFallback = document.createElement('div');
         textFallback.classList.add('card-text-fallback');
-        textFallback.innerText = actors.firstName[0] + ' ' + actors.lastName[0];
+        if (!actors.firstName || !actors.lastName) {
+            textFallback.classList.add('card-text-fallback-unknown');
+            textFallback.innerText = 'unknown';
+        }else{
+            textFallback.innerText = actors.firstName[0] + ' ' + actors.lastName[0];
+        }        
         innerBordDiv.appendChild(textFallback);
     };
     innerBordDiv.appendChild(cardPhoto);

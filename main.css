@@ -104,7 +104,14 @@ body::after {
     font-family: "Freeman", sans-serif;
     font-size: 30px;
 }
-
+.card-text-fallback-unknown{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin-top: 29px;
+    font-family: "Freeman", sans-serif;
+    font-size: 20px;
+}
 .card-fullname {
     margin: 10px;
     font-family: "Teachers", sans-serif;
